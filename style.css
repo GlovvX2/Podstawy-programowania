@@ -25,6 +25,7 @@ header
 nav{
     min-height: 900px;
     width: 10%;
+    float: left;
     background-color: #f0f0f0 ;
 }
 a{
@@ -58,4 +59,28 @@ a:hover{
     white-space: normal;
     float: none;
     outline: 0;
+}
+content 
+{
+    float: left;
+    width: 90%;
+}
+content h2 {
+    font-size: 35px;
+    color: rgb(27, 156, 27);
+    padding: 10px;
+}
+content p
+{
+    font-size: 20px;
+    padding: 10px;
+}
+#ad
+{
+    background-color: black;
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    top: 6%;
+    left: 75%;
 }
