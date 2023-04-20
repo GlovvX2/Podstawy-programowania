@@ -76,7 +76,7 @@ content p
 {
     font-size: 20px;
     padding: 10px;
-    word-wrap: break-word;
+    word-wrap: normal;
 }
 #text
 {

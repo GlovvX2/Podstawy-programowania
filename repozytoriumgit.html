@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="style.css" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Projektowanie Oprogramowania</h1>
+    </header>
+    <nav>
+        <h1>Menu</h1>
+        <a class="nawigacja" href="index.html">Strona główna</a>
+        <a class="nawigacja" href="repozytoriumgit.html">Repozytorium git</a>
+        <a class="nawigacja" href="technikizwinne.html">Techniki Zwinne</a>
+        <a class="nawigacja" href="wzoreprojektowe.html">Wzorce projektowane</a>
+    </nav>
+    <content>
+        <div id="text">
+        <h2>Co to jest system kontroli wersji? <span>V</span></h2>
+        <p>
+            oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+        </p>
+        </div>
+        <div id="text">
+        <h2>Co to jest system kontroli wersji? <span>V</span></h2>
+        <p>
+            oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+        </p>
+        </div>
+        
+        
+
+    </content>
+    <footer>
+        <p>Aktualny czas: </p>
+    </footer>
+    <div id="footer2">
+        <p>Powered by: Pazowskey industries.</p>   
+    </div>
+
+    <script>
+        $(document).ready(function(){
+        $("h2").click(function(){
+            $(this).next("p").slideToggle("slow");
+        });
+        });
+        </script>
 </body>
 </html>
