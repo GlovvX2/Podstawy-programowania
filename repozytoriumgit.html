@@ -23,17 +23,38 @@
     </nav>
     <content>
         <div id="text">
-        <h2>Co to jest system kontroli wersji? <span>V</span></h2>
-        <p>
-            oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+        <h2>Co to jest system kontroli wersji?</h2>
+        <p class="paratext">
+            Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
         </p>
         </div>
         <div id="text">
-        <h2>Co to jest system kontroli wersji? <span>V</span></h2>
-        <p>
-            oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+        <h2>Git a inne systemy kontroli wersji</h2>
+        <p class="paratext">
+            Jeśli masz już pewną wiedzę na temat programowania, zastanawiasz się pewnie, czym różni się Git od RCS lub CVS. Zacznijmy więc od wyjaśnienia różnic. Git, CVS, RCS – co to jest?
+            <br><br><span style="font-weight: bold;">Git</span> – rozproszony system kontroli wersji, który pozwala na niezależne zmiany w jednym kodzie, prowadzone w różnych gałęziach
+            <br><span style="font-weight: bold;">CVS</span> – scentralizowany system kontroli wersji, który opiera się na zależności klient-serwer
+            <br><span style="font-weight: bold;">RCS</span> – lokalny system kontroli wersji, który zmiany zapisuje jedynie na jednym komputerze.
         </p>
         </div>
+        <div id="text">
+            <h2>Git podstawowe funkcje</h2>
+            <p class="paratext">
+                Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+                <br><br><span style="font-weight: bold;">SCM</span> – Source Code Management, czyli po prostu kontrola wersji, a więc to, co zawdzięczamy systemowi Git;
+                <br><span style="font-weight: bold;">repozytorium</span> – miejsce przechowywania całego projektu, wszystkich wersji kodu i historii wprowadzonych zmian;
+                <br><span style="font-weight: bold;">branch</span> – pojedyncze odgałęzienie, jedna wersja, na której pracuje dany programista;
+                <br><span style="font-weight: bold;">clone</span> – pozwala na skopiowanie kodu z repozytorium do własnej gałęzi;
+                <br><span style="font-weight: bold;">commit</span> – przesyła dane z Twojej gałęzi do repozytorium;
+                <br><span style="font-weight: bold;">merge</span> – łączy zmiany wprowadzone w poszczególnych branchach. 
+            </p>
+        </div>
+        <div id="text">
+            <h2>Git dla programistów i nie tylko – poznaj to narzędzie!</h2>
+            <p class="paratext">
+                Jeśli interesuje Cię kariera w IT, Git z pewnością będzie jednym z narzędzi, które powinieneś poznać. Profesjonalne kursy programowania przygotują Cię do efektywnego korzystania z niego. Dlatego też oprócz podstawowych systemów do tworzenia kodu, warto poświęcić czas również na Git. Co więcej, okazuje się, że Git wykorzystywany jest nie tylko przez programistów, ale i np. grafików. Kontrola wersji zapamiętuje także zmiany w plikach graficznych. Dzięki temu Git ma jeszcze więcej użytkowników. 
+            </p>
+            </div>
         
         
 
@@ -48,7 +69,7 @@
     <script>
         $(document).ready(function(){
         $("h2").click(function(){
-            $(this).next("p").slideToggle("slow");
+            $(this).next(".paratext").slideToggle("slow");
         });
         });
         </script>
