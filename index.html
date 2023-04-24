@@ -31,10 +31,35 @@
 
     </content>
     <footer>
-        <p>Aktualny czas: </p>
+        <p id="czas"></p>
     </footer>
     <div id="footer2">
         <p>Powered by: Pazowskey industries.</p>   
     </div>
+    <script>
+        var currentdate = new Date(); 
+        var currentdate = new Date(); 
+        var datetime = "Aktualna data: " + currentdate.getDate() + "."
+                    + (currentdate.getMonth()+1)  + "." 
+                    + currentdate.getFullYear() + "  "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                    document.getElementById("czas").innerHTML=" "+datetime ;
+        setInterval(function() {
+        var currentdate = new Date(); 
+        var datetime = "Aktualna data: " + currentdate.getDate() + "."
+                    + (currentdate.getMonth()+1)  + "." 
+                    + currentdate.getFullYear() + "  "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+                    document.getElementById("czas").innerHTML=" "+datetime ;
+        }, 1000);
+
+
+        
+        
+    </script>
 </body>
 </html>
