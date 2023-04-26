@@ -25,13 +25,13 @@
         <img src="img/git.png" id="git" />
         <img src="img/github.png" id="github" />
         <div id="text">
-        <h2>Co to jest system kontroli wersji?</h2>
+        <h2>▼ Co to jest system kontroli wersji?</h2>
         <p class="paratext">
             Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
         </p>
         </div>
         <div id="text">
-        <h2>Git a inne systemy kontroli wersji</h2>
+        <h2>▼ Git a inne systemy kontroli wersji.</h2>
         <p class="paratext">
             Jeśli masz już pewną wiedzę na temat programowania, zastanawiasz się pewnie, czym różni się Git od RCS lub CVS. Zacznijmy więc od wyjaśnienia różnic. Git, CVS, RCS – co to jest?
             <br><br><span style="font-weight: bold;">Git</span> – rozproszony system kontroli wersji, który pozwala na niezależne zmiany w jednym kodzie, prowadzone w różnych gałęziach
@@ -40,7 +40,7 @@
         </p>
         </div>
         <div id="text">
-            <h2>Git podstawowe funkcje</h2>
+            <h2>▼ Git podstawowe funkcje.</h2>
             <p class="paratext">
                 Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
                 <br><br><span style="font-weight: bold;">SCM</span> – Source Code Management, czyli po prostu kontrola wersji, a więc to, co zawdzięczamy systemowi Git;
@@ -52,7 +52,7 @@
             </p>
         </div>
         <div id="text">
-            <h2>Git dla programistów i nie tylko – poznaj to narzędzie!</h2>
+            <h2>▼ Git dla programistów i nie tylko – poznaj to narzędzie!</h2>
             <p class="paratext">
                 Jeśli interesuje Cię kariera w IT, Git z pewnością będzie jednym z narzędzi, które powinieneś poznać. Profesjonalne kursy programowania przygotują Cię do efektywnego korzystania z niego. Dlatego też oprócz podstawowych systemów do tworzenia kodu, warto poświęcić czas również na Git. Co więcej, okazuje się, że Git wykorzystywany jest nie tylko przez programistów, ale i np. grafików. Kontrola wersji zapamiętuje także zmiany w plikach graficznych. Dzięki temu Git ma jeszcze więcej użytkowników. 
             </p>
@@ -62,7 +62,7 @@
 
     </content>
     <footer>
-        <p>Aktualny czas: </p>
+        <p id="czas"></p>
     </footer>
     <div id="footer2">
         <p>Powered by: Pazowskey industries.</p>   
@@ -74,6 +74,42 @@
             $(this).next(".paratext").slideToggle("slow");
         });
         });
-        </script>
+        
+    </script>
+    <script>
+        var d = new Date();
+        var hour = d.getHours(); // 0-23
+        var min = d.getMinutes(); // 0-59
+        var sec = d.getSeconds(); // 0-59
+        if(hour > 24)
+        {
+            hour = hour - 12;
+        }
+        if(hour < 10)
+            hour = "0" + hour;
+        if(min < 10)
+            min = "0" + min;
+        if(sec < 10)
+            sec = "0" + sec;
+        document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+    function displayTime(){
+        var d = new Date();
+        var hour = d.getHours(); // 0-23
+        var min = d.getMinutes(); // 0-59
+        var sec = d.getSeconds(); // 0-59
+        if(hour > 24)
+        {
+            hour = hour - 12;
+        }
+        if(hour < 10)
+            hour = "0" + hour;
+        if(min < 10)
+            min = "0" + min;
+        if(sec < 10)
+            sec = "0" + sec;
+        document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+        }
+        setInterval(displayTime, 1000);
+    </script>
 </body>
 </html>

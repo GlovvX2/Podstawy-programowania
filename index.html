@@ -37,29 +37,39 @@
         <p>Powered by: Pazowskey industries.</p>   
     </div>
     <script>
-        var currentdate = new Date(); 
-        var currentdate = new Date(); 
-        var datetime = "Aktualna data: " + currentdate.getDate() + "."
-                    + (currentdate.getMonth()+1)  + "." 
-                    + currentdate.getFullYear() + "  "  
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes() + ":" 
-                    + currentdate.getSeconds();
-                    document.getElementById("czas").innerHTML=" "+datetime ;
-        setInterval(function() {
-        var currentdate = new Date(); 
-        var datetime = "Aktualna data: " + currentdate.getDate() + "."
-                    + (currentdate.getMonth()+1)  + "." 
-                    + currentdate.getFullYear() + "  "  
-                    + currentdate.getHours() + ":"  
-                    + currentdate.getMinutes() + ":" 
-                    + currentdate.getSeconds();
-                    document.getElementById("czas").innerHTML=" "+datetime ;
-        }, 1000);
-
-
-        
-        
+        var d = new Date();
+            var hour = d.getHours(); // 0-23
+            var min = d.getMinutes(); // 0-59
+            var sec = d.getSeconds(); // 0-59
+            if(hour > 24)
+            {
+                hour = hour - 12;
+            }
+            if(hour < 10)
+                hour = "0" + hour;
+            if(min < 10)
+                min = "0" + min;
+            if(sec < 10)
+                sec = "0" + sec;
+            document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+        function displayTime(){
+            var d = new Date();
+            var hour = d.getHours(); // 0-23
+            var min = d.getMinutes(); // 0-59
+            var sec = d.getSeconds(); // 0-59
+            if(hour > 24)
+            {
+                hour = hour - 12;
+            }
+            if(hour < 10)
+                hour = "0" + hour;
+            if(min < 10)
+                min = "0" + min;
+            if(sec < 10)
+                sec = "0" + sec;
+            document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+            }
+            setInterval(displayTime, 1000);
     </script>
 </body>
 </html>
