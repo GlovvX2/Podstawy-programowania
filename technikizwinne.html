@@ -37,7 +37,7 @@
                 <span style="font-weight: bold;">SCRUM</span>
                 <br>Nazwa pochodzi z gry w rugby, oznacza formację zawodników, tzw. młyn.
                 Proste, krótkie projekty, jeden lub kilka produktów, mała liczba osób (kilkanaście, kilkadziesiąt osób), brak lub mała liczba zależności pomiędzy zespołami.
-                <br><br><span style="font-weight: bold;">SAFe:</span>
+                <br><br><span style="font-weight: bold;">SAFe</span>
                 <br>Angielska nazwa: Scaled Agile Framework, czyli skalowany Scrum.
                 Złożone projekty lub programy przeznaczone do realizacji na wiele lat, rozbudowany produkt, bardzo duża liczba osób (kilkaset lub nawet ponad tysiąc osób), liczne powiązania pomiędzy zespołami (techniczne i merytoryczne aspekty).
                 <br><br><span style="font-weight: bold;">LeSS</span>
@@ -58,6 +58,23 @@
                 <img src="img/scrum.png" id="scrumpng"/>
             </p>
         </div>
+        <div id="text">
+            <h2>▼ Manifest Agile</h2>
+            <p class="paratext">
+                Dokument opublikowany na stronie agilemanifesto.org pozostaje w niezmienionej formie do dzisiaj. I chociaż można podejrzewać, że opinie autorów na temat tworzenia oprogramowania odrobinę się zmieniły, to jednak idea pozostanie wiecznie słuszna.
+                <br><br>Trudno się temu dziwić, bowiem sam “manifest” jest bardzo ogólny. Jego główna część w tłumaczeniu na język polski wygląda następująco:
+                <span style="font-weight: bold;">Odkrywamy nowe metody programowania dzięki praktyce w programowaniu i wspieraniu w nim innych.</span>
+                <br><br>W wyniku naszej pracy, zaczęliśmy bardziej cenić:
+                <br><br><span style="font-weight: bold;">Ludzi i interakcje</span> od procesów i narzędzi
+                <br><span style="font-weight: bold;">Działające oprogramowanie </span> od szczegółowej dokumentacji
+                <br><span style="font-weight: bold;">Współpracę z klientem</span> od negocjacji umów
+                <br><span style="font-weight: bold;">Reagowanie na zmiany</span> od realizacji założonego planu.
+                <br><br>Oznacza to, że elementy wypisane po prawej są wartościowe, ale większą wartość mają dla nas te, które wypisano po lewej.
+                <br><br>To jednak nie koniec. Autorzy stworzyli także listę <span style="font-weight: bold;">12 Zasad Zwinnego Tworzenia Oprogramowania</span>, które dotyczą tworzenia oprogramowania tylko z nazwy.
+                <br><br>Bo przecież nietrudno jest wykreślić słowo “deweloperskiego” z zasady mówiącej, że “Najbardziej efektywnym i wydajnym sposobem przekazywania informacji zespołowi deweloperskiemu i wewnątrz niego jest rozmowa twarzą w twarz.”
+            </p>
+        </div>
+       
         
     </content>
     <footer>
@@ -67,47 +84,48 @@
         <p>Powered by: Pazowskey industries.</p>   
     </div>
 
-    <script>
-        $(document).ready(function(){
-        $("h2").click(function(){
-            $(this).next(".paratext").slideToggle("slow");
-        });
-        });
-    </script>
- <script>
+<script>
+    $(document).ready(function(){
+    $("h2").click(function(){
+        $(this).next(".paratext").slideToggle("slow");
+    });
+    });
+</script>
+
+<script>
     var d = new Date();
-        var hour = d.getHours(); // 0-23
-        var min = d.getMinutes(); // 0-59
-        var sec = d.getSeconds(); // 0-59
-        if(hour > 24)
-        {
-            hour = hour - 12;
-        }
-        if(hour < 10)
-            hour = "0" + hour;
-        if(min < 10)
-            min = "0" + min;
-        if(sec < 10)
-            sec = "0" + sec;
-        document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
-    function displayTime(){
-        var d = new Date();
-        var hour = d.getHours(); // 0-23
-        var min = d.getMinutes(); // 0-59
-        var sec = d.getSeconds(); // 0-59
-        if(hour > 24)
-        {
-            hour = hour - 12;
-        }
-        if(hour < 10)
-            hour = "0" + hour;
-        if(min < 10)
-            min = "0" + min;
-        if(sec < 10)
-            sec = "0" + sec;
-        document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
-        }
-        setInterval(displayTime, 1000);
+    var hour = d.getHours(); // 0-23
+    var min = d.getMinutes(); // 0-59
+    var sec = d.getSeconds(); // 0-59
+    if(hour > 24)
+    {
+        hour = hour - 12;
+    }
+    if(hour < 10)
+        hour = "0" + hour;
+    if(min < 10)
+        min = "0" + min;
+    if(sec < 10)
+        sec = "0" + sec;
+    document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+function displayTime(){
+    var d = new Date();
+    var hour = d.getHours(); // 0-23
+    var min = d.getMinutes(); // 0-59
+    var sec = d.getSeconds(); // 0-59
+    if(hour > 24)
+    {
+        hour = hour - 12;
+    }
+    if(hour < 10)
+        hour = "0" + hour;
+    if(min < 10)
+        min = "0" + min;
+    if(sec < 10)
+        sec = "0" + sec;
+    document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
+    }
+    setInterval(displayTime, 1000);
 </script>
 </body>
 </html>
