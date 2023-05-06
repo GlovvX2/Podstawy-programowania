@@ -22,22 +22,46 @@
     </nav>
     <content>
         <div id="text">
-            <h2>▼ </h2>
+            <h2>▼ Metodyki zwinne i klasyczne</h2>
             <p class="paratext">
-                Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+                Etapowością, wymaga dokumentacji i monitorowania postępów oraz stosowania odpowiednich technik w zakresie zarządzania ryzykiem czy budżetem. Przykładami podejść klasycznych w zarządzaniu projektami są PRINCE2 czy PMBOK.<br><br>
+
+                Zwinne podejście było obecne w codziennym życiu od bardzo dawna, przykładowo wykorzystywano je w masowej produkcji samochodów na początku XX wieku czy w obszarze zapewniania jakości. Dopiero na początku XXI wieku zostało oficjalnie opisane przez Jeffa Sutherlanda i Kena Schwabera w dokumencie pod nazwą „Scrum Guide”. Metodyki zwinne skupiają się na elastycznym podejściu i iteracyjnej realizacji projektu, zakładając, że nie wszystko można przewidzieć i zaplanować, a ważniejsze jest reagowanie na zmiany niż trzymanie się z góry ustalonego planu.<br><br>
+
+                Według ostatniego badania „State of Agile 2020” Scrum i jego warianty są najchętniej wykorzystywaną metodyką zwinną w organizacjach (według 58% respondentów). Czym więc jest Scrum?
             </p>
         </div>
         <div id="text">
-            <h2>▼ Co to jest system kontroli wersji?</h2>
+            <h2>▼ Metodyki zwinne – rodzaje</h2>
             <p class="paratext">
-                Oprogramowanie służące do śledzenia zmian głównie w kodzie źródłowym oraz pomocy programistom w łączeniu zmian dokonanych w plikach przez wiele osób w różnym czasie.
+                <span style="font-weight: bold;">SCRUM</span>
+                <br>Nazwa pochodzi z gry w rugby, oznacza formację zawodników, tzw. młyn.
+                Proste, krótkie projekty, jeden lub kilka produktów, mała liczba osób (kilkanaście, kilkadziesiąt osób), brak lub mała liczba zależności pomiędzy zespołami.
+                <br><br><span style="font-weight: bold;">SAFe:</span>
+                <br>Angielska nazwa: Scaled Agile Framework, czyli skalowany Scrum.
+                Złożone projekty lub programy przeznaczone do realizacji na wiele lat, rozbudowany produkt, bardzo duża liczba osób (kilkaset lub nawet ponad tysiąc osób), liczne powiązania pomiędzy zespołami (techniczne i merytoryczne aspekty).
+                <br><br><span style="font-weight: bold;">LeSS</span>
+                <br>Angielska nazwa: Large Scale Scrum, czyli skalowany Scrum w dużej skali.
+                Projekty, w których można zastosować jeden Backlog Produktu dla wszystkich zespołów, małe zespoły, jeden Product Owner dedykowany dla wszystkich zespołów. Główny cel to uproszczenie procesów, ról i wydarzeń.
+            </p>
+        </div>
+        <div id="text">
+            <h2>▼ Metodyki zwinne – Scrum</h2>
+            <p class="paratext">
+                <span style="font-weight: bold;">Scrum to m.in.:</span>
+                <br>
+
+                Elastyczne i proaktywne podejście do zarządzania projektami,<br>
+                podział projektu na samoorganizujące się niezależne zespoły,<br>
+                podejście, w którym zespoły posiadają wszystkie kompetencje do ukończenia zadań,<br>
+                iteracyjny sposób pracy oparty na 3 filarach, jakimi są inspekcja, adaptacja i przejrzystość.<br>
+                <img src="img/scrum.png" id="scrumpng"/>
             </p>
         </div>
         
-
     </content>
     <footer>
-        <p>Aktualny czas: </p>
+        <p id="czas"></p>
     </footer>
     <div id="footer2">
         <p>Powered by: Pazowskey industries.</p>   
@@ -50,7 +74,7 @@
         });
         });
     </script>
-    <script>
+ <script>
     var d = new Date();
         var hour = d.getHours(); // 0-23
         var min = d.getMinutes(); // 0-59
@@ -84,7 +108,6 @@
         document.getElementById("czas").innerHTML ="Aktualny czas: "+ hour + ":" + min + ":" + sec + " ";
         }
         setInterval(displayTime, 1000);
-
-    </script>
+</script>
 </body>
 </html>

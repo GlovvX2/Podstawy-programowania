@@ -24,7 +24,7 @@ header
     padding: 5px;
 }
 nav{
-    min-height: 1000px;
+    min-height: 800px;
     width: 10%;
     float: left;
     background-color: #f0f0f0 ;
@@ -151,8 +151,8 @@ content p
     }
     #mainImg
     {
-        width: 200px;
-        height:150px;
+        max-width: 300px;
+        max-height:250px;
     }
     #git
     {
@@ -169,16 +169,21 @@ content p
         padding: 10px;
     }
     content 
-{
-    float: left;
-    width: 100%;
-    min-height: 850px;
-}
+    {
+        float: left;
+        width: 100%;
+        min-height: 850px;
+    }
+    #scrumpng
+    {
+        max-width: 350px;
+        max-height: 250px;
+    }
     
 }
 footer
 {
-    min-width: 90%;
+    min-width: 100%;
     background-color: #666666;
     height: 100px;
     float:left;
@@ -193,7 +198,7 @@ footer p
 }
 #footer2
 {
-    min-width: 90%;
+    min-width: 100%;
     background-color: #333333;
     height: 50px;
     float:left;
@@ -227,4 +232,9 @@ footer p
     top:450px;
     right: 50px;
     position: absolute;
+}
+#scrumpng
+{
+    width: 500px;
+    height:350px;
 }
