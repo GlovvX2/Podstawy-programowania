@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="style.css" >
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 </head>
 <body>
     <header>
@@ -27,6 +28,13 @@
         </p>
         </div>
         <center><img src="img/img1.jpg" id="mainImg" /></center>
+        <h1>Poradnik:</h1>
+        <div id="text">
+            <h2>▼ <- ten znaczek oznacza rozwijany tekst</h2>
+            <p class="paratext">
+               kliknij ponownie zeby go zamknąć :)
+            </p>
+        </div>
         
 
     </content>
@@ -36,6 +44,13 @@
     <div id="footer2">
         <p>Powered by: Pazowskey industries.</p>   
     </div>
+    <script>
+        $(document).ready(function(){
+        $("h2").click(function(){
+            $(this).next(".paratext").slideToggle("slow");
+        });
+        });
+    </script>
     <script>
         var d = new Date();
             var hour = d.getHours(); // 0-23
